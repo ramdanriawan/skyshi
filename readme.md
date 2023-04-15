@@ -3,4 +3,4 @@
 2. pengaturan database ada di folder config/connection.go
 3. buka terminal dan jalankan perintah -> go get gorm.io/gorm github.com/gin-gonic/gin gorm.io/driver/mysql github.com/go-playground/validator/v10
 4. buka terminal dan jalankan perintah go run main.go
-5. Link dokumentasi API ada di: https://documenter.getpostman.com/view/6597551/2s93Xu3mFD#bf1c192f-b1a0-4bc7-8e46-44bcb046cf64
+5. Link dokumentasi API ada di: https://documenter.getpostman.com/view/6597551/2s93Xx1k3A
