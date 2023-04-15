@@ -97,7 +97,7 @@ func (uc *TodoController) Update(ctx *gin.Context) {
 		return
 	}
 
-	data, err := uc.todoService.Update(ctx)
+	_, err := uc.todoService.Update(ctx)
 
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{
@@ -113,7 +113,7 @@ func (uc *TodoController) Update(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{
 		"status": "Success",
 		"message": "Success",
-		"data":   data,
+		"data":   uc.todoService.GetByID(id),
 	})
 }
 

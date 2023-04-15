@@ -51,6 +51,7 @@ func (us *TodoServiceImpl) Create(ctx *gin.Context) (*TodoModel, error) {
 
 	todo := TodoModel{
 		ActivityGroupId: input.ActivityGroupId,
+		Title:   input.Title,
 		IsActive:     bool(input.IsActive),
 		Priority:   input.Priority,
 	}
@@ -83,6 +84,7 @@ func (us *TodoServiceImpl) Update(ctx *gin.Context) (*TodoModel, error) {
 
 	todo := TodoModel{
 		ID:       int64(id),
+		Title:   input.Title,
 		ActivityGroupId: input.ActivityGroupId,
 		IsActive:     bool(input.IsActive),
 		Priority:   input.Priority,

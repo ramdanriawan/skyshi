@@ -88,7 +88,7 @@ func (uc *ActivityGroupController) Update(ctx *gin.Context) {
 		return
 	}
 
-	data, err := uc.activityGroupService.Update(ctx)
+	_, err := uc.activityGroupService.Update(ctx)
 
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{
@@ -104,7 +104,7 @@ func (uc *ActivityGroupController) Update(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{
 		"status": "Success",
 		"message": "Success",
-		"data":   data,
+		"data":   uc.activityGroupService.GetByID(id),
 	})
 }
 
